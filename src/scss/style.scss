@@ -1,5 +1,5 @@
 @import "libs/slick";
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;0,900;1,400&display=swap');
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -13,8 +13,41 @@ body {
     width: 1180px;
     margin: 0 auto;
 }
+.button {
+    button {
+        margin: 0 auto;
+        margin-top: 10px;
+        display: block;
+        width: 226.17px;
+        height: 45px;
+        background: #FFDF44;
+        box-shadow: 0px 10px 30px rgba(255, 223, 68, 0.3);
+        border-radius: 10px;
+        border: none;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 16px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #262626;
+        cursor: pointer;
+        transition: 0.3s all;
+        &:hover {
+            transition: 0.3s all;
+            transform: scale(1.05);
+        }
+    }
+    
+}
+
 
 @import "blocks/_header";
+@import "blocks/_analysis";
+@import "blocks/_appeal";
+@import "blocks/_plans";
+@import "blocks/_get";
+@import "blocks/_steps";
+@import "blocks/_publications";
 
     
 
