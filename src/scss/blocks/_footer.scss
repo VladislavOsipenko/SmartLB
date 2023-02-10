@@ -1,0 +1,128 @@
+.footer {
+    position: relative;
+    padding: 70px 0;
+    &__title {
+        font-weight: 900;
+        font-size: 30px;
+        line-height: 35px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #2A675B;
+        span {
+            color:#339883
+        }
+    }
+
+    &__img {
+        position: absolute;
+        z-index: -5;
+    }
+
+    &__wrapper {
+        margin-top: 100px;
+        display: flex;
+        justify-content: flex-end;
+        position: relative;
+    }
+
+    &__circle {
+        box-sizing: border-box;
+        position: absolute;
+        z-index: -5;
+        bottom: 50%;
+        left: 45%;
+        transform: translateY(50%);
+        width: 444px;
+        height: 444px;
+        border: 40px solid #B8FFF4;
+        border-radius: 100%
+    }
+
+    &__info {
+        width: 390px;
+        padding: 30px 15px 15px 15px;
+        background: #fff;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+
+    &__subtitle {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 21px;
+        text-align: center;
+        color: #3A3A3A;
+    }
+
+    &__text {  
+        display: flex;
+        gap: 15px;
+        p {
+            display: flex;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 16px;
+            color: #323232;
+        }
+    }
+
+    &__icon {
+        margin-top: 10px;
+        width: 31px;
+        height: 31px;
+        background: #FACB3F;
+        border-radius: 100%;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__forma {
+        background: #01AF98;
+        border-radius: 0px 10px 10px 0px;
+        width: 390px;
+        padding: 30px 15px 15px 15px;
+    }
+
+    &__form {
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 23px;
+            input {
+                width: 251px;
+                height: 40px;
+                border-radius: 10px;
+                border: none;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 16px;
+                text-align: center;
+                color: #575757;
+            }
+        }   
+    }
+
+    &__politik {
+        padding-top: 17px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 12px;
+        text-align: center;
+        color: #7DFEED;
+        a {
+            color: #7DFEED;
+            
+        }
+    }
+
+    &__btn {
+        padding-top: 25px;
+    }
+}
+
+

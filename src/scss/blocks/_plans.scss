@@ -131,30 +131,7 @@
             border-radius: 100%;
         }
     }
-    
-	&__circle-1 {
-        position: absolute;
-        width: 935px;
-        height: 935px;
-        color: #fff;
-        border: 180px #F7F7F7 solid;
-        border-radius: 100%;
-        z-index: -5;
-        left: -65%;
-	}
 
-	&__circle-2 {
-        overflow: hidden;
-        position: absolute;
-        width: 935px;
-        height: 935px;
-        color: #fff;
-        border: 180px #F7F7F7 solid;
-        border-radius: 100%;
-        z-index: -5;
-        bottom: 0;
-        right: -65%;
-	}
     &__img {
         position: absolute;
         right: 0;
