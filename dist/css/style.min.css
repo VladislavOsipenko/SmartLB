@@ -169,6 +169,7 @@ body {
   color: rgb(169, 169, 169);
 }
 .header__contacts {
+  position: relative;
   display: flex;
   flex-direction: column;
 }
@@ -323,12 +324,12 @@ body {
   transform: translateY(4px);
 }
 .header__causes {
-  height: 112px;
+  min-height: 112px;
   background: #30C3B0;
 }
 .header__causes-wrapper {
   width: 100%;
-  height: 112px;
+  min-height: 112px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -355,16 +356,22 @@ body {
   color: #FFFFFF;
 }
 
+.analysis {
+  position: relative;
+}
 .analysis__wrapper {
   display: flex;
+  justify-content: end;
+  margin-bottom: 90px;
 }
 .analysis__img {
-  width: 375px;
+  position: absolute;
+  z-index: -5;
 }
 .analysis__img img {
   width: 560px;
-  height: 610px;
-  transform: translateY(31px);
+  height: 603px;
+  transform: translateY(90px);
 }
 .analysis__title {
   margin-top: 77px;
@@ -650,6 +657,7 @@ body {
 
 .steps__wrapper {
   display: flex;
+  padding: 0 20px;
 }
 .steps__title {
   margin-top: 100px;
@@ -710,6 +718,10 @@ body {
   line-height: 21px;
   color: #000000;
 }
+.steps__img img {
+  width: 100%;
+}
+
 .publications {
   background: #F6F6F6;
   padding: 75px 0 80px 0;
@@ -723,9 +735,12 @@ body {
   color: #3E813D;
 }
 .publications__wrapper {
+  padding: 0 20px;
   margin-top: 50px;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 25px;
 }
 .publications__img img {
   transition: 0.3s all;
@@ -763,7 +778,7 @@ body {
 
 .footer {
   position: relative;
-  padding: 70px 0;
+  padding: 70px 0 110px 0;
 }
 .footer__title {
   font-weight: 900;
@@ -781,6 +796,7 @@ body {
   z-index: -5;
 }
 .footer__wrapper {
+  padding: 0 20px;
   margin-top: 100px;
   display: flex;
   justify-content: flex-end;
@@ -872,4 +888,144 @@ body {
 }
 .footer__btn {
   padding-top: 25px;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 1045px;
+  }
+  .header__title {
+    font-size: 30px;
+  }
+}
+@media (max-width: 992px) {
+  .container {
+    max-width: 860px;
+  }
+  .header {
+    position: relative;
+  }
+  .header__top {
+    justify-content: center;
+    gap: 50px;
+  }
+  .header__menu {
+    position: fixed;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    padding: 20px 15px;
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: 0.6s all;
+    z-index: 2;
+  }
+  .header__menu_active {
+    left: 0;
+  }
+  .header__menu_li {
+    padding-right: 0;
+    border: none;
+    margin: 15px 0;
+  }
+  .header__menu_link {
+    font-size: 20px;
+    color: #fff;
+  }
+  .header__hamburger {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    display: block;
+    margin-top: 6px;
+    width: 26px;
+    height: 12px;
+  }
+  .header__hamburger span {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: #000000;
+    margin-bottom: 2px;
+    transition: 0.5s all;
+  }
+  .header__hamburger_active span {
+    margin-bottom: -2px;
+  }
+  .header__hamburger_active span:nth-child(1) {
+    transform: translateY(3px) rotate(-45deg);
+  }
+  .header__hamburger_active span:nth-child(2) {
+    display: none;
+  }
+  .header__hamburger_active span:nth-child(3) {
+    transform: translateY(3px) rotate(45deg);
+  }
+  .header__wrapper {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 50px;
+  }
+  .header__causes-wrapper {
+    flex-wrap: wrap;
+    row-gap: 25px;
+    min-height: 92px;
+    padding: 10px 0;
+  }
+  .plans__wrapper {
+    justify-content: center;
+  }
+  .get__wrapper {
+    justify-content: center;
+  }
+  .publications__wrapper {
+    justify-content: center;
+    gap: 20px;
+  }
+  .analysis__wrapper {
+    padding: 0 20px;
+    text-align: center;
+    align-items: center;
+    display: block;
+  }
+  .analysis__items {
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(1, auto);
+  }
+  .analysis__img {
+    bottom: 0;
+    transform: translateY(120px) translateX(-30%);
+  }
+  .steps__wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .footer__wrapper {
+    justify-content: center;
+  }
+  .footer__circle {
+    left: 23%;
+  }
+  .footer__img {
+    display: none;
+  }
+  .footer__forma {
+    width: 320px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    max-width: 660px;
+  }
+}
+@media (max-width: 576px) {
+  .container {
+    max-width: 100%;
+    padding: 0 10px;
+  }
 }

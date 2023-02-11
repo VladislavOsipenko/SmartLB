@@ -1,4 +1,12 @@
 @media (max-width: 1200px) {
+    .container {
+        max-width: 1045px 
+    }
+    .header {
+        &__title {
+            font-size: 30px;
+        }
+    }    
 
 }
 
@@ -6,19 +14,158 @@
 
 
 @media (max-width: 992px) {
+    .container {
+        max-width: 860px 
+    }
+    .header {
+        &__top {
+            justify-content: center;
+            gap: 50px;
+        }
+        
+        position: relative;
+        &__menu {
+            position: fixed;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            top: 0;
+            left: -100%;
+            width: 50%;
+            height: 100%;
+            padding: 20px 15px;
+            background-color: rgba(0,0,0, .8);
+            transition: 0.6s all;
+            z-index: 2;
+            &_active {
+                left: 0
+            }    
+            &_li {
+                padding-right: 0;
+                border: none;
+                margin: 15px 0;
+            }     
+            &_link {
+                font-size: 20px;
+                color: #fff
+            }    
+        }  
+        &__hamburger {
+            position: absolute;
+            top: 40px;
+            right: 40px;
+            display: block;
+            margin-top: 6px;
+            width: 26px;
+            height: 12px;
+            span {
+                display: block;
+                height: 2px;
+                width: 100%;
+                background-color: #000000;
+                margin-bottom: 2px;
+                transition: 0.5s all;
+            }   
+            &_active {
+                span {
+                    margin-bottom: -2px;
+                    &:nth-child(1) {
+                        transform: translateY(3px) rotate(-45deg)
+                    }
+                    &:nth-child(2) {
+                        display: none
+                    } 
+                    &:nth-child(3) {
+                        transform: translateY(3px) rotate(45deg)
+                    }     
+                }    
+            }    
+        } 
+    }
+    .header {
+        &__wrapper {
+            justify-content: center;
+            display: flex;
+            flex-wrap: wrap;
+            row-gap: 50px;
+        }
+        &__causes-wrapper {
+            flex-wrap: wrap;
+            row-gap: 25px;
+            min-height: 92px;
+            padding: 10px 0;
+        }
+    }
+    .plans {
+        &__wrapper {
+            justify-content: center;
+        }
+    }
+    .get {
+        &__wrapper {
+            justify-content: center;
+        }
+    }
+    .publications {
+        &__wrapper {
+            justify-content: center;
+            gap: 20px;
+        }
+    }
+    .analysis {
+        &__wrapper {
+            padding: 0 20px;
+            text-align: center;
+            align-items: center;
+            display: block;
+        }
+        &__items {
+            align-items: center;
+            justify-content: center;
+            grid-template-columns: repeat(1, auto);
+        }
+        &__img {
+            bottom: 0;
+            transform: translateY(120px) translateX(-30%);
 
+        }
+    }
+    .steps {
+        &__wrapper {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+    .footer {
+        &__wrapper {
+            justify-content: center;
+        }
+        &__circle {
+            left: 23%;
+        }
+        &__img {
+            display: none;
+        }
+        &__forma {
+            width: 320px;
+        }
+    }
 }
 
 
 
-
 @media (max-width: 768px) {
-
+    .container {
+        max-width: 660px 
+    }
 }
 
 
 
 
 @media (max-width: 576px) {
-    
+    .container {
+        max-width: 100%;
+        padding: 0 10px
+    }
 }

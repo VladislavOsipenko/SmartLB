@@ -1,15 +1,19 @@
 .analysis {
-   
+    position: relative;
     &__wrapper {
         display: flex;
+        justify-content: end;
+        margin-bottom: 90px;
     }
 
     &__img {
-        width: 375px;
+        position: absolute;
+        z-index: -5;
+
         img {
             width: 560px;
-            height: 610px;
-            transform: translateY(31px);
+            height: 603px;
+            transform: translateY(90px);
         }
     }
 
