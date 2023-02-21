@@ -11,6 +11,7 @@
 	}
 
 	&__wrapper {
+		justify-content: center;
 		margin-top: 72px;
 		display: flex;
 		flex-wrap: wrap;
@@ -40,7 +41,6 @@
 		color: #2C2C2C;	
 		
 		span {
-			font-family: 'Roboto';
 			font-style: italic;
 			font-weight: 700;
 			font-size: 18px;
